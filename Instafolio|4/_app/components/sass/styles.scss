@@ -1,0 +1,642 @@
+/***** Fonts *****/
+
+$main-font: "Open Sans", sans-serif;
+$font-size: 16px;
+
+/***** Colors *****/
+
+$black: #000;
+$mblack: #333;
+$white: #fff;
+$grey: #585c65;
+$mediumgrey: #9b9b9b;
+$lightgrey: #eeeeee;
+$blue: #3466a1;
+$lightblue: #00d8ff;
+$green: #35969a;
+$red: #F50D0D;
+
+/***** Custom Variables *****/
+
+$padding: 10px;
+$margin: 10px;
+
+/***** Mixin *****/
+
+@mixin break($media) {
+    // Extra small screen / phone
+    @if $media == xs {
+        @media only screen and (max-width: $screen-xs) {
+            @content;
+        }
+    }
+    @else if $media == sm {
+        @media only screen and (max-width: $screen-sm) {
+            @content;
+        }
+    }
+    @else if $media == md {
+        @media only screen and (max-width: $screen-md) {
+            @content;
+        }
+    }
+    @else if $media == lg {
+        @media only screen and (max-width: $screen-lg) {
+            @content;
+        }
+    }
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+/***** Override Bootstrap variables *****/
+
+$font-family-sans-serif: $main-font;
+
+@import "bootstrap";
+
+/***** Main Styles *****/
+
+body {
+    font-family: $main-font;
+    font-weight: 300;
+    color: $mblack;
+    text-align: center;
+    padding-right: 0px !important;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    &:hover, &:focus {
+        color: $green;
+        text-decoration: none;
+        @include transition(all, 0.3s);
+    }
+}
+
+h1, h2 {
+    margin-top: $margin;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 54px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+h4 {
+    margin: $margin 0 $margin * 4 0;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 1px dotted $white;
+}
+
+::-moz-selection {
+    background: $lightblue;
+    color: $white;
+    text-shadow: none;
+}
+
+::selection {
+    background: $lightblue;
+    color: $white;
+    text-shadow: none;
+}
+
+/***** Loader *****/
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    overflow: hidden !important;
+    z-index: 99999;
+    img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+/***** General style, all sections *****/
+
+.head-fixed {
+    position: fixed !important;
+    background: rgba($black, 0.85);
+    width: 20%;
+    height: 100%;
+    @include break(md) {
+        position: static !important;
+        width: 100%;
+    }
+}
+
+.section-container {
+    background: $white;
+    margin-left: 20%;
+    padding-bottom: 0;
+    @include break(md) {
+        margin-left: 0;
+    }
+}
+
+.section-description {
+    margin-top: $margin * 6;
+    padding-bottom: $padding;
+    p {
+        margin-top: $margin * 3;
+        padding: 0 120px;
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+
+.container {
+    width: 100%;
+}
+
+/***** Main Footer *****/
+.main-footer-wrap {}
+
+/***** Logo *****/
+
+.photo {
+    display: block;
+    @include border-radius(50%);
+    background: $lightblue;
+    margin: $margin * 4 auto;
+    color: $white;
+    width: 200px;
+    height: 200px;
+    h1 {
+        line-height: 200px;
+    }
+}
+
+/***** Footer-social *****/
+
+.footer-social {
+    margin-bottom: $margin * 3;
+}
+
+.ultm-32.ultm-square {
+    @include border-radius(0);
+}
+
+.ultm-gray-to-color {
+    background-color: $mblack;
+}
+
+.ultm-32 {
+    width: 3em;
+    height: 3em;
+}
+
+.ultm {
+    margin: 0 5px;
+}
+
+/***** Top content *****/
+
+.top-content {
+    h3 {
+        color: $white;
+    }
+    .description {
+        color: $white;
+        margin: $margin * 2 0 $margin * 3 0;
+        padding: 0 $padding * 3;
+        font-size: 15px;
+        line-height: 36px;
+    }
+}
+
+/***** Instagram Styles *****/
+.isotope {
+    background: #fff;
+    max-width: 1200px;
+}
+
+/* clear fix */
+.isotope:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrap {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.instagram-wrap {
+    background: $lightgrey;
+}
+
+.instagram-content {
+    h3 {
+        display: none;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        padding: $padding * 5 0;
+        color: darken($lightgrey, 20%);
+    }
+}
+
+.photo-box {
+    width: 25%;
+    @include break(md) {
+        width: 50%;
+    }
+
+    @include break(xs) {
+        width: 100%;
+    }
+
+    .image-wrap {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.insta-info {
+    background: rgba($black, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transition: all 250ms;
+    a {
+        position: absolute;
+        left: 65%;
+        top: 80%;
+        color: $lightblue;
+        font-size: 1em;
+        @include break(lg) {
+            left: 57%;
+            top: 75%;
+            font-size: 1.3em;
+        }
+
+        @include break(md) {
+            left: 63%;
+            top: 80%;
+            font-size: 1.5em;
+        }
+
+        @include break(sm) {
+            left: 65%;
+            top: 80%;
+        }
+
+        @include break(xs) {
+            left: 65%;
+            top: 80%;
+        }
+    }
+}
+
+.insta-info-show {
+    opacity: 1;
+    transform: scale(0.9, 0.9);
+    -webkit-transform: scale(0.9, 0.9);
+}
+
+.likes, .comments {
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 47%;
+    padding: 5px;
+    color: $white;
+    @include break(lg) {
+        font-size: 0.9em;
+        margin-top: 50%;
+    }
+
+    @include break(md) {
+        font-size: 1.5em;
+        margin-top: 45%;
+        padding: 10px;
+    }
+
+    @include break(sm) {
+        font-size: 1.4em;
+        margin-top: 45%;
+        padding: 10px;
+    }
+
+    @include break(xs) {
+        font-size: 1.5em;
+        margin-top: 45%;
+        padding: 10px;
+    }
+}
+
+.fa-heart-o:before, .fa-comment-o:before {
+    padding-right: 10px;
+}
+
+/***** load button *****/
+
+.modal-button {
+    margin: $margin * 6 0;
+    button {
+        height: 52px;
+        margin: 0;
+        padding: 0 85px;
+        background: none;
+        border: 1px solid $lightblue;
+        font-size: 22px;
+        font-weight: 300;
+        color: $black;
+        @include border-radius(0);
+        @include box-shadow(none);
+        @include transition(all, 0.3s);
+    }
+}
+
+.modal-button {
+    button:hover, button:hover {
+        opacity: 0.8;
+        background: none;
+        border: 1px dotted $lightblue;
+        color: $black;
+    }
+    button:focus, button:active:focus {
+        outline: 0;
+        background: none;
+        color: $lightblue;
+    }
+}
+
+/***** Modal *****/
+.modal-dialog {
+    width: 90%;
+    margin: 20% auto;
+}
+
+.modal-backdrop {
+    background-color: $white;
+}
+
+.modal-title {
+    color: $white;
+    text-align: left;
+    margin: 0 0 0 15px;
+}
+
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+
+.modal-content {
+    background-color: $black;
+    @include border-radius(0);
+}
+
+.modal {
+    left: 20%;
+    @include break(md) {
+        left: 0;
+    }
+}
+
+.modal-open {
+    overflow-y: auto;
+}
+
+.close {
+    color: $lightblue;
+    opacity: 1;
+}
+
+/***** Contact us *****/
+
+.form-group {
+    margin-bottom: 1px;
+}
+
+.contact-now-btn {
+    border: 0;
+    display: inline-block;
+    padding: $padding * 2 $padding * 4;
+    color: $white;
+    background: $mblack;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: $margin * 4;
+    &:hover {
+        background: lighten($lightblue, 2%);
+    }
+}
+
+.contact-form, .contact-address {
+    padding-bottom: $padding * 2;
+    text-align: left;
+    h3 {
+        padding: 0 0 $padding 0;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 34px;
+    }
+}
+
+.contact-form {
+    p {
+        margin: 15px 0 0 0;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    form {
+        margin: $margin * 1.5 0 0 0;
+    }
+    input, textarea {
+        width: 100%;
+        height: 52px;
+        margin-bottom: $margin;
+    }
+}
+
+.contact-form form textarea {
+    height: 162px;
+}
+
+.contact-form form .contact-error {
+    border-color: $green;
+}
+
+.contact-address {
+    p {
+        color: $white;
+        margin-bottom: $margin / 2;
+        font-size: 15px;
+        line-height: 32px;
+        i {
+            width: 40px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.contact-address {
+    a, a:focus {
+        color: $lightblue;
+    }
+    a:hover {
+        color: $lightblue;
+        border-bottom: 1px dotted $white;
+    }
+}
+
+input[type="text"], textarea {
+    margin: 0;
+    padding: 0 $padding;
+    vertical-align: middle;
+    background: none;
+    border: 1px dotted $white;
+    font-family: $main-font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 50px;
+    color: $white;
+    @include border-radius(0);
+    @include box-shadow(none);
+    @include transition(all, 0.3s);
+    &:focus {
+        outline: 0;
+        border: 1px dotted $lightblue;
+        @include box-shadow(none);
+    }
+}
+
+input[type="text"]:-moz-placeholder, textarea:-moz-placeholder {
+    color: $white;
+}
+
+input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: $white;
+}
+
+input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: $white;
+}
+
+.contact-form, .modal-footer {
+    button {
+        margin: 0;
+        padding: $padding $padding;
+        vertical-align: middle;
+        background: $mblack;
+        border: 0;
+        font-family: $main-font;
+        font-size: 15px;
+        font-weight: 300;
+        color: $white;
+        @include border-radius(0);
+        @include box-shadow(none);
+        @include transition(all, 0.3s);
+        &:hover {
+            background: $white;
+            color: $lightblue;
+            @include transition(all, 0.3s);
+        }
+        &:active {
+            outline: 0;
+            opacity: 0.6;
+            color: $lightblue;
+            @include box-shadow(none);
+        }
+        &:focus {
+            outline: 0;
+            background: $mblack;
+            color: $lightblue;
+        }
+    }
+}
+
+/***** Footer *****/
+.footer-copyright {
+    color: $white;
+    padding: $padding 0 $padding * 2 0;
+    margin: $margin 0;
+    font-size: 10px;
+    line-height: 32px;
+    text-align: center;
+}
+
+/***** Isotope CSS3 transitions *****/
+.isotope, .isotope .isotope-item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+}

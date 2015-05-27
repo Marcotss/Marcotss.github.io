@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>Instafolio | 3</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,300">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="_app/css/animate.css">
+		<link rel="stylesheet" href="_app/ultimate-flat-social-icons/ultm-css/ultm.css">
+		<link rel="stylesheet" href="_app/css/styles.css">
+		<link rel="shortcut icon" href="_app/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="_app/img/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<div class="page-container">
+			<!-- Loader -->
+			<div class="loader">
+				<div class="loader-img">
+					<svg width="40" height="40" viewbox="0 0 40 40">
+					<polygon points="0 0 0 40 40 40 40 0" class="rect" />
+					</svg>
+				</div>
+			</div>
+			
+			<!-- Header -->
+			<header class="head-fixed">
+				<div class="row">
+					<div id="col-sm-12">
+						<div class="logo wow BounceInLeft">
+							<h1>Logo</h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="main-footer-wrap">
+						<div class="col-md-4 col-sm-4">
+							<div class="controls wow fadeInDownBig">
+								<button id="prev" ><i class="fa fa-chevron-left"></i></button>
+								<button id="next" ><i class="fa fa-chevron-right"></i></button>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<button type="button" class="contact-now-btn wow fadeInDownBig" data-toggle="modal" data-target="#myModal" >Contact_</button>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="icons-wrap footer-social wow fadeInDownBig">
+								<a class="ultm ultm-facebook ultm-32 ultm-square ultm-gray-to-color" href=""></a>
+								<a class="ultm ultm-twitter ultm-32 ultm-square ultm-gray-to-color" href=""></a>
+								<a class="ultm ultm-instagram-1 ultm-32 ultm-square ultm-gray-to-color" href=""></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<!-- Instafeed -->
+			<div class="features-container section-container">
+				<div class="top-content">
+					<div class="inner-bg">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12 text">
+									<h1 class="wow fadeInLeftBig">HELLO! I'AM MARCO</h1>
+									<div class="description wow fadeInLeftBig">
+										I love to travel all around my country and surf good waves.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 features section-description wow fadeIn">
+								<h4>LATEST PHOTOS_</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="instagram-content">
+									<div class="row photos-wrap">
+										<!-- Instafeed target div -->
+										<div id="instafeed"></div>
+										<!-- The following HTML will be our template inside instafeed -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="modal-button">
+									<button id="load-more" class="btn">Load More_</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<!-- Footer -->
+					<footer>
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12 footer-copyright">
+									2014 &copy; MARCO SOLANO. ALL RIGHTS RESERVED.
+								</div>
+							</div>
+						</div>
+					</footer>
+					
+					<!-- Modal Contact -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Send us a message</h4>
+								</div>
+								<div class="modal-body">
+									<!-- Form -->
+									<div class="">
+										<div class="">
+											<div class="">
+												<div class="contact-form wow fadeInLeft">
+													<form role="form" action="assets/contact.php" method="post">
+														<div class="form-group">
+															<label class="sr-only" for="contact-email">Email</label>
+															<input type="text" name="email" placeholder="Email_" class="contact-email" id="contact-email">
+														</div>
+														<div class="form-group">
+															<label class="sr-only" for="contact-subject">Subject</label>
+															<input type="text" name="subject" placeholder="Subject_" class="contact-subject" id="contact-subject">
+														</div>
+														<div class="form-group">
+															<label class="sr-only" for="contact-message">Message</label>
+															<textarea name="message" placeholder="Message_" class="contact-message" id="contact-message"></textarea>
+														</div>
+														<button type="submit" class="btn">Send_</button>
+													</form>
+												</div>
+												<div class="contact-address wow fadeInUp">
+													<h3>Contact details</h3>
+													<p><i class="fa fa-map-marker"></i>San Jose, Costa Rica</p>
+													<p><i class="fa fa-phone"></i>Phone: 00 506 71 03 64 03</p>
+													<p><i class="fa fa-envelope"></i>Email: <a href="">contact@yourdomain.com</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close_</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Javascript -->
+		<script src="_app/js/jquery-1.10.2.min.js"></script>
+		<script src="_app/js/bootstrap.js"></script>
+		<script src="_app/js/jquery.backstretch.min.js"></script>
+		<script src="_app/js/wow.min.js"></script>
+		<script src="_app/js/instafeed.min.js"></script>
+		<script src="_app/js/app.min.js"></script>
+		<script src="_app/js/modernizr.js"></script>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>Instafolio | 1</title>
+		<!-- CSS -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700|Kaushan+Script|Montserrat' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" type="text/css" href="_app/css/animate.css">
+			<link rel="stylesheet" type="text/css" href="_app/css/styles.css">
+		</head>
+		<body>
+			<!-- Loader -->
+			<div class="loader">
+				<div class="loader-img"></div>
+			</div>
+			<!-- Header -->
+			<header>
+				<img src="_app/images/bg_header_2.jpg" alt="Waves">
+				<div class="name fancy-font wow fadeInLeftBig">Marco Salas</div>
+				<div class="titles wow fadeInLeftBig">
+					<h1>
+					Hello! <span>I'am Marco</span>
+					</h1>
+					<h2>I love to travel all around my country and surf good waves</h2>
+				</div>
+				<div class="social wow fadeInRightBig">
+					<a href="#" class="facebook">Facebook</a>
+					<a href="#" class="twitter">Twitter</a>
+					<a href="#" class="instagram">Instagram</a>
+				</div>
+			</header>
+			<!-- Instagram Wrap -->
+			<section class="instagram-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 wow fadeInRightBig">
+							<div class="instagram-content">
+								<h3 class="wow fadeIn">Latest Photos</h3>
+								<div class="row photos-wrap">
+									<!-- Instafeed target div -->
+									<div id="instafeed"></div>
+									<!-- The following HTML will be our template inside instafeed -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Load Button -->
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 wow shake">
+							<button id="load-more" href="">Load More...</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Contact -->
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 wow fadeInLeftBig">
+							<h4>Get in touch</h4>
+							<p class="about-text">I design and code. Don't hesitate and get in touch with me if you need some creative work done. I always work to achieve my best and fulfil client needs</p>
+							<!-- Button trigger modal -->
+							<button type="button" class="contact-now-btn" data-toggle="modal" data-target="#myModal" >Contact Now</button>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer -->
+			<section class="footer-bottom wow fadeInLeft">
+				2014 &copy; Marco Solano. All rights reserved.
+			</section>
+			<!-- Modal Contact -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="myModalLabel">Send us a message</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Form -->
+							<div class="contact-container section-container section-container-full-bg">
+								<div class="contact-form wow fadeInLeft">
+									<form role="form" action="assets/contact.php" method="post">
+										<div class="form-group">
+											<label class="sr-only" for="contact-email">Email</label>
+											<input type="text" name="email" placeholder="Email..." class="contact-email" id="contact-email">
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="contact-subject">Subject</label>
+											<input type="text" name="subject" placeholder="Subject..." class="contact-subject" id="contact-subject">
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="contact-message">Message</label>
+											<textarea name="message" placeholder="Message..." class="contact-message" id="contact-message"></textarea>
+										</div>
+										<button type="submit" class="btn">Send</button>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Javascripts -->
+			<script src="_app/js/jquery-1.10.2.min.js"></script>
+			<script src="_app/js/bootstrap.js"></script>
+			<script src="_app/js/wow.min.js"></script>
+			<script src="_app/js/instafeed.min.js"></script>
+			<script src="_app/js/app.min.js"></script>
+			<script src="_app/js/modernizr.js"></script>
+		</body>
+	</html>
