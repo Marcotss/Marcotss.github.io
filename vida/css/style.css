@@ -1111,6 +1111,28 @@ a.goog-te-menu2-item{
     padding-right: 5px;
 }
 
+@media (max-width: 767px)  {
+
+  #google_translate_element{
+      position: relative;
+      top: 130px;
+      right: -135px;
+      z-index: 1000;
+  }
+
+}
+
+@media (max-width: 480px)  {
+
+  #google_translate_element{
+      position: relative;
+      top: 130px;
+      right: -66px;
+      z-index: 1000;  
+  }
+
+}
+
 /*isotope filter*/
 
 .button-group {
