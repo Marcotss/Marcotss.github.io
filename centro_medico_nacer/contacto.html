@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Centro Medico Nacer en Heredia Costa Rica, Centros medicos en Heredia Costas Rica, Ginecologos  en Heredia Costa Rica, Oftalmologos  en Heredia Costa Rica, Urologos  en Heredia Costa Rica, Doctor Fernando Hernandez Henao Ginecologo en Heredia Costa Rica, Doctor Gabriel Odio Castillo  Ginecologo en Heredia Costa Rica, Doctora Rosibel Salas Villalobos  Ginecologa en Heredia Costa Rica, Doctor Jose Felipe Centeno Rodriguez  Oftalmologo en Heredia Costa Rica, Doctor Alberto Fuentes Pinedo  Urologo en Heredia Costa Rica, Doctor Roberto Brenes Esquivel  Ginecologo en Heredia Costa Rica, Doctor Nasser Yamal Mena Bejarano  Ginecologo en Heredia Costa Rica, Doctora Adriana Jimenez Sanabria  Ginecologa en Heredia Costa Rica</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" href="app/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="app/css/grid.css">
+  <link rel="stylesheet" href="app/css/style.css">
+  <link rel="stylesheet" href="app/css/search.css">
+  <link rel="stylesheet" href="app/css/google-map.css">
+  <link rel="stylesheet" href="app/css/contact-form.css">
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="app/js/jquery-1.8.1.min.js"></script>
+  <script src="app/js/jquery-migrate-1.2.1.js"></script>
+  <!--[if lt IE 9]>
+        <html class="lt-ie9">
+            <div style=' clear: both; text-align:center; position: relative;'>
+                <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+                    <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                    alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+                </a>
+            </div>
+            <script src="js/html5shiv.js"></script>
+            <![endif]-->
+
+  <script src='app/js/device.min.js'></script>
+  <script type="text/javascript">
+		function googleTranslateElementInit() {
+		new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'de,en,es,fr,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+		</script>
+</head>
+
+<body>
+  <div class="page">
+    <!--========================================================
+                HEADER
+                =========================================================-->
+    <header>
+      <div id="stuck_container" class="stuck_container">
+        <div class="container">
+          <div class="row">
+            <div class="grid_8">
+              <!-- <div class="brand logo" alt="logo medicard">
+                <img src="app/images/Logo-Medicard-web.png">
+              </div> -->
+            </div>
+            <div class="grid_4">
+            </div>
+          </div>
+          <nav class="nav">
+            <ul class="sf-menu">
+              <li>
+                <a href="index.html">Inicio</a>
+              </li>
+              <li>
+                <a href="ginecologia.html">Ginecología</a>
+              </li>
+              <li >
+                <a href="oftalmologia.html">Oftalmología</a>
+              </li>
+              <li>
+                <a href="urologia.html">Urología</a>
+              </li>
+              <li class="active">
+                <a href="contacto.html">Contactenos</a>
+              </li>
+              <li>
+                <div id="google_translate_element"></div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--========================================================
+                CONTENT
+                =========================================================-->
+    <main>
+      <section>
+
+        <section class="map">
+          <div id="google-map" class="map_model"></div>
+          <ul class="map_locations">
+            <li data-x="-84.1204885" data-y="9.9919162">
+              <p>MediCard Costa Rica, San Pablo, Heredia.
+                <span>Tel: (506) 7290-0858</span>
+              </p>
+            </li>
+          </ul>
+        </section>
+        <div class="well-02 __sub07">
+          <div class="container">
+            <h3>Para más información: &nbsp;
+              <span>(506) 2260-9012 / 2263-7037</span>
+            </h3>
+          </div>
+        </div>
+        <div class="bg-wrap">
+          <div class="well-04 __mod">
+            <div class="container">
+              <h5>Rellene el siguiente formulario para solicitar su cita médica:</h5>
+              <form id="contact-form" class='contact-form' role="form" action="process.php" method="post">
+                <div class="contact-form-loader"></div>
+                <fieldset>
+                  <div class="row">
+                    <div class="grid_6">
+                      <label class="message">
+                        <textarea class="cform-bg cform-color" name="sender-message" placeholder="* Mensaje" required></textarea>
+                      </label>
+                    </div>
+                    <div class="grid_6">
+                      <label class="name">
+                        <input class="cform-bg cform-color" type="text" name="sender-name" placeholder="Nombre"  required />
+                      </label>
+
+                      <label class="email">
+                        <input class="cform-bg cform-color" type="text" name="email" placeholder="Correo"  required />
+                      </label>
+                      <div class="btn-wr">
+                        <button class="submit-btn" type="submit">Enviar su mensaje</button>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div id="modal1" class="modal fade response-message">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                          &times;
+                        </button>
+                        <h6 class="modal-title">Centro Médico Nacer</h6>
+                      </div>
+                      <div class="modal-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <!--========================================================
+                FOOTER
+                =========================================================-->
+    <footer>
+      <div class="bg-wrap">
+        <div class="footer-well">
+          <div class="container">
+            <div class="row">
+              <div class="grid_4">
+                <div class="copyright">
+                  <h6>Redes Sociales</h6>
+                  <p class="info-facebook">Siguenos en FACEBOOK para que estén actualizados en noticias de nuestro grupo de especialistas y de el Centro Médico.. </p>
+                  <!-- {%FOOTER_LINK} -->
+                  <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-facebook-official fa-2x"><a href="https://www.facebook.com/medicardcostarica">facebook</a></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid_4">
+                <div class="about-us">
+                  <h6>Nosotros</h6>
+                  <p>Los especialistas en GINECOLOGIA, OFTALMOLOGIA, UROLOGIA y ULTRASONIDO te esperan en nuestro Centro Médico Nacer.</p>
+                </div>
+              </div>
+              <div class="grid_4">
+                <div class="contact-us">
+                  <h6>Contactenos</h6>
+                  <p>Tel: (506) 2260-9012</p>
+                  <a href="index.html#">info@centromediconacercr.com</a>
+                  <p>
+                    <span>Heredia, Costa Rica</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="copy">
+              <a href="http://www.guiamedicadecostarica.com/es/index.html">Diseñado por Guia Médica de Costa Rica - Gavarrette Group </br>2015</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="app/js/script.js"></script>
+  <script src="app/js/modal.js"></script>
+</body>
+
+</html>
